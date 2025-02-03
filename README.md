@@ -4,7 +4,7 @@
 
 A Generative Adversarial Network (GAN) implementation for translating Synthetic Aperture Radar (SAR) images to RGB visual representations.
 
-![Sample Results](samples/comparison.png)
+![Sample Results](samples/Screenshot_2025-02-03_155828.png)
 
 ## Features
 
