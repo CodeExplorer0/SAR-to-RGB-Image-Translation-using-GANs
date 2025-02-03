@@ -38,29 +38,29 @@ The model expects paired SAR-RGB images in PNG format. Example structure:
 ## Model Architecture
 
 ### Generator (U-Net)
-Generator(
-(down1): DownSample(...)
-(down2): DownSample(...)
-(up1): Upsample(...)
-(final): Sequential(
-Upsample(scale_factor=2.0),
-Conv2d(128, 3, kernel_size=(4, 4))
-)
-)
+Generator(  
+(down1): DownSample(...)  
+(down2): DownSample(...)  
+(up1): Upsample(...)  
+(final): Sequential(  
+Upsample(scale_factor=2.0),  
+Conv2d(128, 3, kernel_size=(4, 4))  
+)  
+)  
 Total params: 41,828,099
 
 
 ### Discriminator (PatchGAN)
-Discriminator(
-(model): Sequential(
-Conv2d(4, 64, kernel_size=(4, 4)),
-LeakyReLU(0.2),
-Conv2d(64, 128, kernel_size=(4, 4)),
-...
-Conv2d(512, 1, kernel_size=(4, 4))
-)
-)
-Total params: 2,767,553
+Discriminator(  
+(model): Sequential(  
+Conv2d(4, 64, kernel_size=(4, 4)),  
+LeakyReLU(0.2),  
+Conv2d(64, 128, kernel_size=(4, 4)),  
+...  
+Conv2d(512, 1, kernel_size=(4, 4))  
+)  
+)  
+Total params: 2,767,553  
 
 
 ## Training Results
